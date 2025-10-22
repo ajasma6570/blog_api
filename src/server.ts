@@ -45,12 +45,10 @@ const corsOptions: CorsOptions = {
             );
             logger.warn(`CORS error: ${origin} is not allowed by CORS`);
         }
-
     },
 };
 
 app.use(cors(corsOptions));
-
 
 (async () => {
     try {

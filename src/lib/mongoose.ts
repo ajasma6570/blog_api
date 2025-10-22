@@ -24,15 +24,10 @@ export const connectToDatabase = async (): Promise<void> => {
     try {
         await mongoose.connect(config.MONGO_URI, clientOptions);
 
-        // logger.info('Connected to the database successfully.', {
-        //     uri: config.MONGO_URI,
-        //     options: clientOptions,
-        // });
-
         adze.info('Connected to the database successfully.', {
             uri: config.MONGO_URI,
             options: clientOptions,
-        })
+        });
     } catch (err) {
         if (err instanceof Error) {
             throw err;

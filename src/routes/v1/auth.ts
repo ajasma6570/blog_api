@@ -4,7 +4,6 @@ import validationError from '@/middlewares/validationError';
 import login from '@/controllers/v1/auth/login';
 import refreshToken from '@/controllers/v1/auth/refresh-token';
 import { loginSchema, refreshTokenSchema, registerSchema } from '@/schemas/authSchema';
-import { cookie } from 'express-validator';
 import logout from '@/controllers/v1/auth/logout';
 import authenticate from '@/middlewares/authenticate';
 
